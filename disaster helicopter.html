@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Helicopter Disaster Rescue - Cockpit View</title>
+  <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  <style>
+    body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; }
+    #hud { position: absolute; top: 10px; left: 10px; color: #00FF00; font-weight: bold; text-shadow: 0 0 10px #00FF00; }
+    #altitude { font-size: 18px; margin: 5px 0; }
+    #speed { font-size: 18px; margin: 5px 0; }
+    #fuel { font-size: 18px; margin: 5px 0; }
+    #rescue-status { position: absolute; bottom: 20px; right: 20px; color: #FF6347; font-weight: bold; font-size: 16px; }
+  </style>
+</head>
+
+<body>
+  <a-scene>
+    <!-- Camera positioned in helicopter cockpit -->
+    <a-camera position="0 1.5 -0.5" look-controls="enabled: true"></a-camera>
+
+    <!-- Lighting -->
+    <a-light type="ambient" color="white" intensity="0.6"></a-light>
+    <a-light type="directional" color="orange" intensity="0.7" position="10 15 10"></a-light>
+    <a-light type="point" color="#FF4500" intensity="0.8" position="-8 5 -15"></a-light>
+
+    <!-- Sky - Dark and ominous -->
+    <a-sky color="#2a2a3e"></a-sky>
+
+    <!-- COCKPIT ENVIRONMENT (User's Perspective) -->
+    
+    <!-- Cockpit floor -->
+    <a-plane position="0 -1.5 0.5" rotation="-90 0 0" width="3" height="2" color="#1a1a1a"></a-plane>
+
+    <!-- Cockpit walls -->
+    <a-box position="0 0 1.8" width="3" height="2.5" depth="0.2" color="#0a0a0a"></a-box> <!-- Front windshield frame -->
+    <a-box position="-1.6 0 0" rotation="0 90 0" width="2.5" depth="0.2" height="2.5" color="#1a1a1a"></a-box> <!-- Left wall -->
+    <a-box position="1.6 0 0" rotation="0 -90 0" width="2.5" depth="0.2" height="2.5" color="#1a1a1a"></a-box> <!-- Right wall -->
+
+    <!-- Windshield glass effect -->
+    <a-plane position="0 0 1.75" width="3" height="2" color="#87CEEB" opacity="0.3"></a-plane>
+
+    <!-- Main control panel -->
+    <a-box position="0 -0.8 0.3" width="2.8" height="0.8" depth="0.3" color="#1a1a3e"></a-box>
+
+    <!-- Left instrument panel -->
+    <a-box position="-1.2 0.3 0.5" width="0.8" height="0.8" depth="0.2" color="#0f0f2e"></a-box>
+    <!-- Altimeter display -->
+    <a-box position="-1.2 0.5 0.65" width="0.6" height="0.4" depth="0.05" color="#00FF00"></a-box>
+    <a-text value="ALT: 500FT" position="-1.2 0.5 0.7" align="center" color="#00FF00" font="mozillavr" width="1.5" height="0.3" anchor="center" scale="0.8 0.8 0.8"></a-text>
+
+    <!-- Center instrument panel -->
+    <a-box position="0 0.3 0.5" width="0.8" height="0.8" depth="0.2" color="#0f0f2e"></a-box>
+    <!-- Compass/Heading indicator -->
+    <a-cylinder position="0 0.5 0.65" radius="0.25" height="0.05" color="#FFD700"></a-cylinder>
+    <a-text value="HDG: 180°" position="0 0.25 0.7" align="center" color="#FFD700" font="mozillavr" width="1.5" height="0.3" anchor="center" scale="0.8 0.8 0.8"></a-text>
+
+    <!-- Right instrument panel -->
+    <a-box position="1.2 0.3 0.5" width="0.8" height="0.8" depth="0.2" color="#0f0f2e"></a-box>
+    <!-- Speed indicator -->
+    <a-box position="1.2 0.5 0.65" width="0.6" height="0.4" depth="0.05" color="#FF6347"></a-box>
+    <a-text value="SPD: 80KT" position="1.2 0.5 0.7" align="center" color="#FF6347" font="mozillavr" width="1.5" height="0.3" anchor="center" scale="0.8 0.8 0.8"></a-text>
+
+    <!-- Fuel gauge panel -->
+    <a-box position="0 -0.6 0.35" width="0.6" height="0.3" depth="0.1" color="#1a1a3e"></a-box>
+    <a-text value="FUEL" position="0 -0.55 0.4" align="center" color="#FFD700" font="mozillavr" width="1" height="0.2" anchor="center" scale="0.7 0.7 0.7"></a-text>
+
+    <!-- Collective stick (left side) -->
+    <a-cylinder position="-0.6 -1.0 0.1" radius="0.08" height="0.6" color="#333"></a-cylinder>
+    <a-sphere position="-0.6 -0.7 0.1" radius="0.12" color="#444"></a-sphere>
+
+    <!-- Cyclic stick (center) -->
+    <a-cylinder position="0.2 -1.0 0" radius="0.08" height="0.6" color="#333"></a-cylinder>
+    <a-sphere position="0.2 -0.7 0" radius="0.12" color="#444"></a-sphere>
+
+    <!-- Rudder pedals (front) -->
+    <a-box position="-0.3 -1.5 1.2" width="0.2" height="0.15" depth="0.3" color="#222"></a-box>
+    <a-box position="0.3 -1.5 1.2" width="0.2" height="0.15" depth="0.3" color="#222"></a-box>
+
+    <!-- Throttle controls (right side) -->
+    <a-box position="1.3 -0.9 0.3" width="0.15" height="0.5" depth="0.2" color="#333"></a-box>
+    <a-box position="1.3 -0.8 0.1" width="0.15" height="0.5" depth="0.2" color="#333"></a-box>
+
+    <!-- ========== DISASTER ENVIRONMENT (Below Helicopter) ========== -->
+
+    <!-- Ground terrain -->
+    <a-plane position="0 -50 0" rotation="-90 0 0" width="100" height="100" color="#8B7355"></a-plane>
+
+    <!-- Flooded areas (water) -->
+    <a-plane position="-15 -49.5 -20" rotation="-90 0 0" width="30" height="25" color="#1E90FF" opacity="0.7"></a-plane>
+    <a-plane position="20 -49.5 10" rotation="-90 0 0" width="25" height="20" color="#1E90FF" opacity="0.7"></a-plane>
+
+    <!-- DESTROYED CITY BUILDINGS -->
+
+    <!-- Building 1 - Collapsed office building -->
+    <a-box position="-25 -45 -20" width="12" height="20" depth="10" color="#808080"></a-box>
+    <a-box position="-25 -40 -25" width="8" height="8" depth="6" color="#696969" rotation="25 0 15"></a-box>
+    <a-box position="-20 -42 -15" width="6" height="10" depth="8" color="#A9A9A9" rotation="-20 20 -10"></a-box>
+
+    <!-- Building 1 - Fire/Emergency lights -->
+    <a-cylinder position="-22 -30 -20" radius="0.5" height="2" color="#FF4500"></a-cylinder>
+    <a-cylinder position="-28 -32 -22" radius="0.4" height="1.5" color="#FF6347"></a-cylinder>
+    <a-box position="-25 -35 -18" width="3" height="3" depth="3" color="#FFD700" opacity="0.6"></a-box>
+
+    <!-- Building 2 - Damaged residential complex -->
+    <a-box position="5 -48 -15" width="15" height="15" depth="12" color="#A9A9A9"></a-box>
+    <a-box position="10 -42 -12" width="8" height="8" depth="7" color="#808080" rotation="15 -20 10"></a-box>
+    <a-box position="0 -44 -18" width="6" height="6" depth="5" color="#696969" rotation="-15 15 -20"></a-box>
+
+    <!-- Building 2 - Fires and emergencies -->
+    <a-cylinder position="5 -32 -15" radius="0.6" height="3" color="#FF4500"></a-cylinder>
+    <a-cylinder position="10 -30 -10" radius="0.5" height="2.5" color="#FF6347"></a-cylinder>
+    <a-box position="8 -38 -12" width="4" height="4" depth="4" color="#FFD700" opacity="0.6"></a-box>
+
+    <!-- Building 3 - Hospital/residential -->
+    <a-box position="30 -47 5" width="14" height="18" depth="10" color="#CD853F"></a-box>
+    <a-box position="35 -41 10" width="9" height="9" depth="8" color="#8B4513" rotation="20 15 -10"></a-box>
+
+    <!-- Building 3 - Emergency indicators -->
+    <a-cylinder position="30 -30 5" radius="0.5" height="2.5" color="#FF4500"></a-cylinder>
+    <a-box position="32 -36 7" width="3" height="3" depth="3" color="#FFD700" opacity="0.6"></a-box>
+
+    <!-- Bridge - Partially collapsed -->
+    <a-box position="0 -48.5 -35" width="20" height="1" depth="3" color="#A9A9A9"></a-box>
+    <a-box position="8 -45 -35" width="6" height="5" depth="3" color="#808080" rotation="40 0 0"></a-box>
+
+    <!-- PEOPLE STUCK - Need Rescue (Red spheres on buildings/roofs) -->
+    
+    <!-- Building 1 survivors -->
+    <a-sphere position="-22 -25 -20" radius="0.4" color="#FF0000"></a-sphere>
+    <a-text value="HELP!" position="-22 -23 -20" align="center" color="red" font="mozillavr" width="2" height="0.5" anchor="center"></a-text>
+
+    <a-sphere position="-28 -28 -18" radius="0.4" color="#FF0000"></a-sphere>
+    <a-text value="SOS" position="-28 -26 -18" align="center" color="red" font="mozillavr" width="1.5" height="0.4" anchor="center"></a-text>
+
+    <a-sphere position="-20 -30 -15" radius="0.4" color="#FF0000"></a-sphere>
+    <a-text value="UP HERE!" position="-20 -28 -15" align="center" color="red" font="mozillavr" width="2" height="0.5" anchor="center"></a-text>
+
+    <!-- Building 2 survivors on roof -->
+    <a-sphere position="5 -32 -15" radius="0.4" color="#FF0000"></a-sphere>
+    <a-text value="RESCUE!" position="5 -30 -15" align="center" color="red" font="mozillavr" width="2" height="0.5" anchor="center"></a-text>
+
+    <a-sphere position="12 -32 -8" radius="0.4" color="#FF0000"></a-sphere>
+    <a-text value="HELP!" position="12 -30 -8" align="center" color="red" font="mozillavr" width="1.5" height="0.4" anchor="center"></a-text>
+
+    <a-sphere position="2 -33 -20" radius="0.4" color="#FF0000"></a-sphere>
+    <a-text value="HERE!" position="2 -31 -20" align="center" color="red" font="mozillavr" width="1.5" height="0.4" anchor="center"></a-text>
+
+    <!-- Building 3 survivors -->
+    <a-sphere position="30 -29 5" radius="0.4" color="#FF0000"></a-sphere>
+    <a-text value="GET US!" position="30 -27 5" align="center" color="red" font="mozillavr" width="2" height="0.5" anchor="center"></a-text>
+
+    <a-sphere position="35 -31 10" radius="0.4" color="#FF0000"></a-sphere>
+
+    <!-- Flood survivors on roofs -->
+    <a-sphere position="-10 -48 -20" radius="0.4" color="#FF0000"></a-sphere>
+    <a-sphere position="-5 -48 -15" radius="0.4" color="#FF0000"></a-sphere>
+
+    <!-- Smoke/disaster effects (semi-transparent planes) -->
+    <a-plane position="-25 -30 -20" width="15" height="15" color="#696969" opacity="0.4"></a-plane>
+    <a-plane position="8 -35 -12" width="12" height="12" color="#696969" opacity="0.4"></a-plane>
+
+    <!-- Emergency vehicles on ground -->
+    <a-box position="-40 -48 -25" width="2.5" height="2" depth="5" color="#FF0000"></a-box>
+    <a-sphere position="-40 -46 -22" radius="0.4" color="#FFD700"></a-sphere>
+
+    <a-box position="45 -48 10" width="2.5" height="2" depth="5" color="#FF0000"></a-box>
+
+    <!-- Search & rescue marker - Flashing light -->
+    <a-cylinder position="5 -28 -15" radius="0.3" height="0.5" color="#00FF00" animation="property: material.color; type: color; from: #00FF00; to: #000000; dur: 1000; loop: true;"></a-cylinder>
+
+    <!-- HUD/On-screen status text -->
+    <a-text value="DISASTER ZONE: CITY CENTER" position="0 0.8 1.7" align="center" color="#00FF00" font="mozillavr" width="4" height="0.5" anchor="center" scale="1.2 1.2 1.2"></a-text>
+
+    <a-text value="Survivors Detected: 8" position="-1.2 0 1.7" align="left" color="#FF6347" font="mozillavr" width="2" height="0.3" anchor="center"></a-text>
+
+    <a-text value="Fires: 5 Major" position="-1.2 -0.3 1.7" align="left" color="#FF6347" font="mozillavr" width="2" height="0.3" anchor="center"></a-text>
+
+    <a-text value="Flooding: Severe" position="-1.2 -0.6 1.7" align="left" color="#FF6347" font="mozillavr" width="2" height="0.3" anchor="center"></a-text>
+
+    <a-text value="Approach target. Use collective to lower." position="0 -1.3 1.7" align="center" color="#00FF00" font="mozillavr" width="3.5" height="0.3" anchor="center" scale="0.9 0.9 0.9"></a-text>
+
+    <!-- Distance/targeting reticle -->
+    <a-ring position="0 -0.5 1.75" radius-inner="0.3" radius-outer="0.35" color="#00FF00"></a-ring>
+
+  </a-scene>
+
+  <!-- HTML HUD elements -->
+  <div id="hud">
+    <div id="altitude">ALTITUDE: 500 FT</div>
+    <div id="speed">AIRSPEED: 80 KT</div>
+    <div id="fuel">FUEL: 85%</div>
+  </div>
+
+  <div id="rescue-status">
+    ⚠️ DISASTER ZONE ACTIVE ⚠️<br>
+    8 SURVIVORS NEED RESCUE<br>
+    Approach with caution
+  </div>
+
+</body>
+
+</html>

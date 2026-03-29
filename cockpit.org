@@ -1,0 +1,29 @@
+* Cockpit Dashboard
+** System Status
+*** CPU Usage
+*** Memory Usage
+*** Disk Space
+*** Network Status
+
+** Active Services
+*** Web Server
+*** Database
+*** Cache Service
+*** Message Queue
+
+** Alerts
+*** High CPU Warning
+*** Low Disk Space
+*** Service Down
+
+** Quick Actions
+*** Restart Services
+*** View Logs
+*** System Diagnostics
+*** Backup Data
+
+** Performance Metrics
+*** Request Latency
+*** Error Rate
+*** Throughput
+*** Uptime
