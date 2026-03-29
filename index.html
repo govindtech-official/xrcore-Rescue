@@ -300,34 +300,65 @@
 
     <!-- ==================== ENVIRONMENTAL ELEMENTS ==================== -->
     
-    <!-- HILLS -->
-    <!-- Hill 1 (left side) -->
-    <a-sphere position="-60 5 -30" radius="15" color="#7AC943"></a-sphere>
-    <!-- Hill 2 (right side) -->
-    <a-sphere position="50 8 15" radius="18" color="#6BA82E"></a-sphere>
-    <!-- Hill 3 (far back) -->
-    <a-sphere position="0 10 -50" radius="20" color="#7AC943"></a-sphere>
-
-    <!-- STANDING TREES (Healthy Environment) -->
+    <!-- STANDING TREES (Realistic Forest Environment) -->
     <!-- Tree Group A (Left Forest) -->
-    <a-cylinder position="-45 3 -40" radius="0.5" height="10" color="#8B4513"></a-cylinder>
-    <a-sphere position="-45 9 -40" radius="2.5" color="#2D5016"></a-sphere>
+    <!-- Tree A1 - Realistic multi-layer conifer -->
+    <a-cylinder position="-45 2 -40" radius="0.6" height="12" color="#654321"></a-cylinder>
+    <a-cone position="-45 10 -40" radius="3.5" height="5" color="#1B4D2E"></a-cone>
+    <a-cone position="-45 13 -40" radius="2.5" height="4" color="#0F3D1F"></a-cone>
+    <a-cone position="-45 15 -40" radius="1.5" height="3" color="#1B4D2E"></a-cone>
     
-    <a-cylinder position="-40 3 -42" radius="0.45" height="9" color="#8B4513"></a-cylinder>
-    <a-sphere position="-40 8.5 -42" radius="2.3" color="#228B22"></a-sphere>
+    <!-- Tree A2 - Realistic deciduous tree -->
+    <a-cylinder position="-40 2.5 -42" radius="0.55" height="11" color="#654321"></a-cylinder>
+    <a-sphere position="-40 9.5 -42" radius="4" color="#2D5016"></a-sphere>
+    <a-sphere position="-43 8 -42" radius="3.2" color="#228B22"></a-sphere>
+    <a-sphere position="-37 8 -42" radius="3.2" color="#2D5016"></a-sphere>
+    <a-sphere position="-40 12 -42" radius="3" color="#228B22"></a-sphere>
     
-    <a-cylinder position="-50 3 -35" radius="0.48" height="10.5" color="#8B4513"></a-cylinder>
-    <a-sphere position="-50 9.5 -35" radius="2.4" color="#2D5016"></a-sphere>
+    <!-- Tree A3 - Tall conifer -->
+    <a-cylinder position="-50 2 -35" radius="0.7" height="14" color="#654321"></a-cylinder>
+    <a-cone position="-50 11 -35" radius="4" height="6" color="#0F3D1F"></a-cone>
+    <a-cone position="-50 14.5 -35" radius="2.8" height="4.5" color="#1B4D2E"></a-cone>
+    <a-cone position="-50 17 -35" radius="1.8" height="3" color="#0F3D1F"></a-cone>
 
     <!-- Tree Group B (Right Forest) -->
-    <a-cylinder position="55 3 20" radius="0.52" height="11" color="#8B4513"></a-cylinder>
-    <a-sphere position="55 9.5 20" radius="2.6" color="#228B22"></a-sphere>
+    <!-- Tree B1 - Large deciduous -->
+    <a-cylinder position="55 2.5 20" radius="0.8" height="12" color="#654321"></a-cylinder>
+    <a-sphere position="55 10 20" radius="4.5" color="#228B22"></a-sphere>
+    <a-sphere position="52 8.5 20" radius="3.8" color="#2D5016"></a-sphere>
+    <a-sphere position="58 8.5 20" radius="3.8" color="#228B22"></a-sphere>
+    <a-sphere position="55 13 20" radius="3.2" color="#1B6B3F"></a-sphere>
+    <a-sphere position="55 16 20" radius="2" color="#0F3D1F"></a-sphere>
     
-    <a-cylinder position="60 3 25" radius="0.48" height="10" color="#8B4513"></a-cylinder>
-    <a-sphere position="60 9 25" radius="2.4" color="#2D5016"></a-sphere>
+    <!-- Tree B2 - Conifer with branches -->
+    <a-cylinder position="60 2 25" radius="0.65" height="13" color="#654321"></a-cylinder>
+    <a-cone position="60 10.5 25" radius="3.8" height="5.5" color="#1B4D2E"></a-cone>
+    <a-cone position="60 14 25" radius="2.7" height="4" color="#0F3D1F"></a-cone>
+    <a-cone position="60 16.5 25" radius="1.6" height="2.5" color="#0F3D1F"></a-cone>
     
-    <a-cylinder position="50 3 22" radius="0.5" height="10" color="#8B4513"></a-cylinder>
-    <a-sphere position="50 9 22" radius="2.5" color="#228B22"></a-sphere>
+    <!-- Tree B3 - Mixed deciduous -->
+    <a-cylinder position="50 2.5 22" radius="0.7" height="11" color="#654321"></a-cylinder>
+    <a-sphere position="50 9 22" radius="3.8" color="#2D5016"></a-sphere>
+    <a-sphere position="47.5 7.5 22" radius="3.2" color="#228B22"></a-sphere>
+    <a-sphere position="52.5 7.5 22" radius="3.2" color="#2D5016"></a-sphere>
+    <a-sphere position="50 12 22" radius="2.8" color="#228B22"></a-sphere>
+
+    <!-- Additional Trees for Density -->
+    <!-- Tree C1 (left background) -->
+    <a-cylinder position="-55 2 -45" radius="0.6" height="10" color="#654321"></a-cylinder>
+    <a-cone position="-55 8.5 -45" radius="3.2" height="4" color="#1B4D2E"></a-cone>
+    <a-cone position="-55 11 -45" radius="2.2" height="3" color="#0F3D1F"></a-cone>
+
+    <!-- Tree C2 (right background) -->
+    <a-cylinder position="65 2.5 30" radius="0.65" height="11" color="#654321"></a-cylinder>
+    <a-sphere position="65 9 30" radius="3.8" color="#228B22"></a-sphere>
+    <a-sphere position="62.5 7 30" radius="3" color="#2D5016"></a-sphere>
+    <a-sphere position="67.5 7 30" radius="3" color="#228B22"></a-sphere>
+
+    <!-- Tree C3 (center background) -->
+    <a-cylinder position="0 2 -55" radius="0.7" height="12" color="#654321"></a-cylinder>
+    <a-cone position="0 9 -55" radius="3.8" height="5" color="#0F3D1F"></a-cone>
+    <a-cone position="0 12.5 -55" radius="2.7" height="3.5" color="#1B4D2E"></a-cone>
 
     <!-- HOUSES (on hills) -->
     <!-- House 1 (on left hill) -->
@@ -359,160 +390,135 @@
     <!-- Window -->
     <a-box position="-5 20.5 -53" width="0.8" height="0.8" depth="0.3" color="#87CEEB"></a-box>
 
-    <!-- ==================== FLUFFY CLOUDS ==================== -->
-    <!-- Cloud 1 (top left) -->
-    <a-sphere position="-50 30 -40" radius="5" color="#FFFFFF" opacity="0.85"></a-sphere>
-    <a-sphere position="-45 31 -38" radius="4.5" color="#FFFFFF" opacity="0.85"></a-sphere>
-    <a-sphere position="-55 29 -38" radius="4" color="#FFFFFF" opacity="0.85"></a-sphere>
+    <!-- ==================== REALISTIC FLUFFY CLOUDS ==================== -->
+    <!-- Cloud 1 (top left - multi-puff) -->
+    <a-sphere position="-55 32 -35" radius="6" color="#F0F8FF" opacity="0.9"></a-sphere>
+    <a-sphere position="-50 34 -33" radius="5.5" color="#F0F8FF" opacity="0.9"></a-sphere>
+    <a-sphere position="-45 33 -35" radius="5" color="#E0FFFF" opacity="0.88"></a-sphere>
+    <a-sphere position="-60 33 -32" radius="4.5" color="#F0F8FF" opacity="0.88"></a-sphere>
 
-    <!-- Cloud 2 (top center left) -->
-    <a-sphere position="-20 35 -20" radius="6" color="#F5F5F5" opacity="0.9"></a-sphere>
-    <a-sphere position="-15 36 -18" radius="5" color="#F5F5F5" opacity="0.9"></a-sphere>
-    <a-sphere position="-25 34 -18" radius="5.5" color="#F5F5F5" opacity="0.9"></a-sphere>
+    <!-- Cloud 2 (mid left - fluffy) -->
+    <a-sphere position="-35 28 5" radius="7" color="#FFFFFF" opacity="0.92"></a-sphere>
+    <a-sphere position="-28 30 6" radius="6" color="#FFFFFF" opacity="0.92"></a-sphere>
+    <a-sphere position="-42 29 5" radius="5" color="#F0F8FF" opacity="0.9"></a-sphere>
+    <a-sphere position="-32 26 8" radius="4.5" color="#E0FFFF" opacity="0.88"></a-sphere>
 
-    <!-- Cloud 3 (top center) -->
-    <a-sphere position="5 32 10" radius="5.5" color="#FFFFFF" opacity="0.85"></a-sphere>
-    <a-sphere position="10 33 12" radius="4.5" color="#FFFFFF" opacity="0.85"></a-sphere>
-    <a-sphere position="0 31 12" radius="4" color="#FFFFFF" opacity="0.85"></a-sphere>
+    <!-- Cloud 3 (center - large fluffy) -->
+    <a-sphere position="5 36 -5" radius="7.5" color="#FFFFFF" opacity="0.93"></a-sphere>
+    <a-sphere position="12 38 -3" radius="6.5" color="#FFFFFF" opacity="0.93"></a-sphere>
+    <a-sphere position="-2 37 -8" radius="6" color="#F0F8FF" opacity="0.91"></a-sphere>
+    <a-sphere position="8 35 -8" radius="5.5" color="#E0FFFF" opacity="0.89"></a-sphere>
+    <a-sphere position="0 34 0" radius="4.5" color="#FFFFFF" opacity="0.88"></a-sphere>
 
-    <!-- Cloud 4 (top right) -->
-    <a-sphere position="45 34 25" radius="6" color="#F5F5F5" opacity="0.9"></a-sphere>
-    <a-sphere position="50 35 27" radius="5" color="#F5F5F5" opacity="0.9"></a-sphere>
-    <a-sphere position="40 33 27" radius="5.5" color="#F5F5F5" opacity="0.9"></a-sphere>
+    <!-- Cloud 4 (right side - puffy) -->
+    <a-sphere position="50 31 20" radius="6.5" color="#FFFFFF" opacity="0.91"></a-sphere>
+    <a-sphere position="58 33 22" radius="6" color="#F0F8FF" opacity="0.91"></a-sphere>
+    <a-sphere position="43 32 18" radius="5.5" color="#FFFFFF" opacity="0.89"></a-sphere>
+    <a-sphere position="55 29 25" radius="5" color="#E0FFFF" opacity="0.88"></a-sphere>
 
-    <!-- Cloud 5 (top far right) -->
-    <a-sphere position="60 30 5" radius="5" color="#FFFFFF" opacity="0.85"></a-sphere>
-    <a-sphere position="65 31 7" radius="4.5" color="#FFFFFF" opacity="0.85"></a-sphere>
-    <a-sphere position="55 29 7" radius="4" color="#FFFFFF" opacity="0.85"></a-sphere>
+    <!-- Cloud 5 (far right - soft) -->
+    <a-sphere position="65 30 10" radius="6" color="#FFFFFF" opacity="0.9"></a-sphere>
+    <a-sphere position="72 32 12" radius="5.5" color="#F0F8FF" opacity="0.9"></a-sphere>
+    <a-sphere position="58 29 8" radius="4.5" color="#E0FFFF" opacity="0.87"></a-sphere>
 
-    <!-- Cloud 6 (mid left) -->
-    <a-sphere position="-35 25 15" radius="5.5" color="#F5F5F5" opacity="0.88"></a-sphere>
-    <a-sphere position="-30 26 17" radius="4.5" color="#F5F5F5" opacity="0.88"></a-sphere>
-    <a-sphere position="-40 24 17" radius="4" color="#F5F5F5" opacity="0.88"></a-sphere>
+    <!-- Cloud 6 (top center-right) -->
+    <a-sphere position="25 35 5" radius="6.5" color="#FFFFFF" opacity="0.92"></a-sphere>
+    <a-sphere position="32 37 7" radius="6" color="#FFFFFF" opacity="0.92"></a-sphere>
+    <a-sphere position="18 36 2" radius="5.5" color="#F0F8FF" opacity="0.9"></a-sphere>
+    <a-sphere position="28 34 0" radius="4.5" color="#E0FFFF" opacity="0.88"></a-sphere>
 
-    <!-- Cloud 7 (mid right back) -->
-    <a-sphere position="30 28 -30" radius="5" color="#FFFFFF" opacity="0.85"></a-sphere>
-    <a-sphere position="35 29 -28" radius="4.5" color="#FFFFFF" opacity="0.85"></a-sphere>
-    <a-sphere position="25 27 -28" radius="4" color="#FFFFFF" opacity="0.85"></a-sphere>
+    <!-- Cloud 7 (back area) -->
+    <a-sphere position="-10 33 -45" radius="6" color="#F0F8FF" opacity="0.89"></a-sphere>
+    <a-sphere position="0 35 -48" radius="5.5" color="#FFFFFF" opacity="0.91"></a-sphere>
+    <a-sphere position="-18 34 -42" radius="5" color="#E0FFFF" opacity="0.88"></a-sphere>
 
-    <!-- THUNDER EFFECT -->
-    <a-light id="thunder" type="point" color="#FFFF99" intensity="0" position="0 25 0"></a-light>
-    <a-entity animation="property: light.intensity; from: 0; to: 3; dur: 150; loop: true; delay: 5000;" animation__off="property: light.intensity; from: 3; to: 0; dur: 250; loop: true; delay: 5150;\"></a-entity>
-
-    <!-- ==================== HELICOPTER 1 - Red (USER'S HELICOPTER - Stationary) ==================== -->
-    <a-entity position="-22 18 -10">
-      <!-- Fuselage -->
-      <a-box position="0 0 0" width="2" height="1.2" depth="4" color="#FF0000" ></a-box>
-      <!-- Cockpit -->
-      <a-sphere position="0 0.8 1.5" radius="0.6" color="#87CEEB"></a-sphere>
+    <!-- ==================== HELICOPTER 1 - RED (Active Rescue - Left Building) ==================== -->
+    <a-entity position="-25 25 -12" animation="property: position; from: -25 25 -12; to: -15 28 -8; dur: 8000; easing: linear; loop: true;">
+      <!-- Fuselage (main body) -->
+      <a-box position="0 0 0" width="3" height="1.5" depth="5" color="#CC0000"></a-box>
+      <!-- Nose cone -->
+      <a-cone position="0 0.3 3" radius="0.8" height="1.2" color="#990000"></a-cone>
+      <!-- Cockpit/windshield -->
+      <a-box position="0 0.8 2" width="1.5" height="1.2" depth="1.5" color="#87CEEB" opacity="0.6"></a-box>
       <!-- Tail boom -->
-      <a-box position="0 0 -1.5" width="0.4" height="0.4" depth="1.2" color="#FF0000"></a-box>
-      <!-- Tail rotor -->
-      <a-cylinder position="0 0.5 -2" radius="0.6" height="0.1" color="#333"></a-cylinder>
-
-      <!-- Main rotor (spinning) -->
-      <a-entity position="0 1.8 0" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 500; easing: linear; loop: true;">
-        <a-cylinder position="0 0 0" radius="2" height="0.05" color="#333"></a-cylinder>
-        <a-box position="-2 0 0" width="4" height="0.08" depth="0.3" color="#444"></a-box>
+      <a-cylinder position="0 0 -2.5" radius="0.25" height="2" color="#CC0000"></a-cylinder>
+      <!-- Tail rotor (small spinning) -->
+      <a-entity position="0 0.4 -3.5" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 400; easing: linear; loop: true;">
+        <a-cylinder position="0 0 0" radius="0.8" height="0.08" color="#333"></a-cylinder>
       </a-entity>
-
-      <!-- Landing skids -->
-      <a-box position="-0.8 -0.7 0.5" width="0.15" height="1" depth="0.15" color="#000"></a-box>
-      <a-box position="0.8 -0.7 0.5" width="0.15" height="1" depth="0.15" color="#000"></a-box>
-
-      <!-- Rescue basket (animated up/down) -->
-      <a-entity position="0 -1.5 0" animation="property: position; from: 0 -1.5 0; to: 0 -12 0; dur: 4000; easing: easeInOutQuad; loop: true;">
-        <a-box position="0 0 0" width="0.8" height="0.6" depth="0.8" color="#FFD700"></a-box>
-        <!-- Rescue rope -->
-        <a-cylinder position="0 1 0" radius="0.05" height="2" color="#FFD700"></a-cylinder>
-        <!-- Person being rescued -->
-        <a-entity position="0 -0.4 0">
-          <!-- Head -->
-          <a-sphere position="0 0.3 0" radius="0.15" color="#FDBCB4"></a-sphere>
-          <!-- Body -->
-          <a-cylinder position="0 0 0" radius="0.12" height="0.4" color="#FF6347"></a-cylinder>
-          <!-- Arms -->
-          <a-cylinder position="-0.15 0.05 0" radius="0.05" height="0.3" color="#FDBCB4" rotation="0 0 -30"></a-cylinder>
-          <a-cylinder position="0.15 0.05 0" radius="0.05" height="0.3" color="#FDBCB4" rotation="0 0 30"></a-cylinder>
-        </a-entity>
+      <!-- Landing skids (twin) -->
+      <a-cylinder position="-1.2 -0.8 0" radius="0.15" height="1.2" color="#000"></a-cylinder>
+      <a-cylinder position="1.2 -0.8 0" radius="0.15" height="1.2" color="#000"></a-cylinder>
+      <!-- Main rotor (spinning) -->
+      <a-entity position="0 2.2 0" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 450; easing: linear; loop: true;">
+        <a-cylinder position="0 0 0" radius="3" height="0.06" color="#333"></a-cylinder>
+        <a-box position="-3 0 0" width="6" height="0.1" depth="0.25" color="#444"></a-box>
+        <a-box position="0 0 -3" width="0.25" height="0.1" depth="6" color="#444"></a-box>
+      </a-entity>
+      <!-- Rescue winch/basket (animated) -->
+      <a-entity position="0.5 -2 0.5" animation="property: position; from: 0.5 -2 0.5; to: 0.5 -15 0.5; dur: 6000; easing: easeInOutQuad; loop: true;">
+        <a-box position="0 0 0" width="1" height="0.8" depth="1" color="#FF8C00"></a-box>
+        <a-cylinder position="0 1.5 0" radius="0.08" height="3" color="#8B4513"></a-cylinder>
       </a-entity>
     </a-entity>
 
-    <!-- ==================== HELICOPTER 2 - Blue (Patrol over buildings) ==================== -->
-    <a-entity position="-8 22 -5" animation="property: position; from: -8 22 -5; to: 15 22 10; dur: 12000; easing: linear; loop: true;">
-      <!-- Fuselage -->
-      <a-box position="0 0 0" width="2" height="1.2" depth="4" color="#0099FF"></a-box>
-      <!-- Cockpit -->
-      <a-sphere position="0 0.8 1.5" radius="0.6" color="#87CEEB"></a-sphere>
+    <!-- ==================== HELICOPTER 2 - BLUE (Active Rescue - Right Building) ==================== -->
+    <a-entity position="12 26 -6" animation="property: position; from: 12 26 -6; to: 20 28 0; dur: 9000; easing: linear; loop: true; delay: 1000;">
+      <!-- Fuselage (main body) -->
+      <a-box position="0 0 0" width="3" height="1.5" depth="5" color="#0066CC"></a-box>
+      <!-- Nose cone -->
+      <a-cone position="0 0.3 3" radius="0.8" height="1.2" color="#003366"></a-cone>
+      <!-- Cockpit/windshield -->
+      <a-box position="0 0.8 2" width="1.5" height="1.2" depth="1.5" color="#87CEEB" opacity="0.6"></a-box>
       <!-- Tail boom -->
-      <a-box position="0 0 -1.5" width="0.4" height="0.4" depth="1.2" color="#0099FF"></a-box>
-      <!-- Tail rotor -->
-      <a-cylinder position="0 0.5 -2" radius="0.6" height="0.1" color="#333"></a-cylinder>
-
-      <!-- Main rotor (spinning) -->
-      <a-entity position="0 1.8 0" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 500; easing: linear; loop: true;">
-        <a-cylinder position="0 0 0" radius="2" height="0.05" color="#333"></a-cylinder>
-        <a-box position="-2 0 0" width="4" height="0.08" depth="0.3" color="#444"></a-box>
+      <a-cylinder position="0 0 -2.5" radius="0.25" height="2" color="#0066CC"></a-cylinder>
+      <!-- Tail rotor (small spinning) -->
+      <a-entity position="0 0.4 -3.5" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 400; easing: linear; loop: true;">
+        <a-cylinder position="0 0 0" radius="0.8" height="0.08" color="#333"></a-cylinder>
       </a-entity>
-
-      <!-- Landing skids -->
-      <a-box position="-0.8 -0.7 0.5" width="0.15" height="1" depth="0.15" color="#000"></a-box>
-      <a-box position="0.8 -0.7 0.5" width="0.15" height="1" depth="0.15" color="#000"></a-box>
-
-      <!-- Rescue basket (animated up/down) -->
-      <a-entity position="0 -1.5 0" animation="property: position; from: 0 -1.5 0; to: 0 -12 0; dur: 4000; easing: easeInOutQuad; loop: true; delay: 2000;">
-        <a-box position="0 0 0" width="0.8" height="0.6" depth="0.8" color="#FFD700"></a-box>
-        <!-- Rescue rope -->
-        <a-cylinder position="0 1 0" radius="0.05" height="2" color="#FFD700"></a-cylinder>
-        <!-- Person being rescued -->
-        <a-entity position="0 -0.4 0">
-          <!-- Head -->
-          <a-sphere position="0 0.3 0" radius="0.15" color="#FDBCB4"></a-sphere>
-          <!-- Body -->
-          <a-cylinder position="0 0 0" radius="0.12" height="0.4" color="#4169E1"></a-cylinder>
-          <!-- Arms -->
-          <a-cylinder position="-0.15 0.05 0" radius="0.05" height="0.3" color="#FDBCB4" rotation="0 0 -30"></a-cylinder>
-          <a-cylinder position="0.15 0.05 0" radius="0.05" height="0.3" color="#FDBCB4" rotation="0 0 30"></a-cylinder>
-        </a-entity>
+      <!-- Landing skids (twin) -->
+      <a-cylinder position="-1.2 -0.8 0" radius="0.15" height="1.2" color="#000"></a-cylinder>
+      <a-cylinder position="1.2 -0.8 0" radius="0.15" height="1.2" color="#000"></a-cylinder>
+      <!-- Main rotor (spinning) -->
+      <a-entity position="0 2.2 0" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 450; easing: linear; loop: true;">
+        <a-cylinder position="0 0 0" radius="3" height="0.06" color="#333"></a-cylinder>
+        <a-box position="-3 0 0" width="6" height="0.1" depth="0.25" color="#444"></a-box>
+        <a-box position="0 0 -3" width="0.25" height="0.1" depth="6" color="#444"></a-box>
+      </a-entity>
+      <!-- Rescue winch/basket (animated) -->
+      <a-entity position="-0.5 -2 0.5" animation="property: position; from: -0.5 -2 0.5; to: -0.5 -15 0.5; dur: 6000; easing: easeInOutQuad; loop: true;">
+        <a-box position="0 0 0" width="1" height="0.8" depth="1" color="#FF8C00"></a-box>
+        <a-cylinder position="0 1.5 0" radius="0.08" height="3" color="#8B4513"></a-cylinder>
       </a-entity>
     </a-entity>
 
-    <!-- ==================== HELICOPTER 3 - Yellow (Patrol towards island) ==================== -->
-    <a-entity position="5 21 20" animation="property: position; from: 5 21 20; to: 5 21 35; dur: 10000; easing: linear; loop: true; delay: 500;">
-      <!-- Fuselage -->
-      <a-box position="0 0 0" width="2" height="1.2" depth="4" color="#FFD700"></a-box>
-      <!-- Cockpit -->
-      <a-sphere position="0 0.8 1.5" radius="0.6" color="#87CEEB"></a-sphere>
+    <!-- ==================== HELICOPTER 3 - YELLOW (Patrol & Support - Island) ==================== -->
+    <a-entity position="8 24 15" animation="property: position; from: 8 24 15; to: 15 26 28; dur: 12000; easing: linear; loop: true; delay: 2000;">
+      <!-- Fuselage (main body) -->
+      <a-box position="0 0 0" width="3" height="1.5" depth="5" color="#FFCC00"></a-box>
+      <!-- Nose cone -->
+      <a-cone position="0 0.3 3" radius="0.8" height="1.2" color="#CC9900"></a-cone>
+      <!-- Cockpit/windshield -->
+      <a-box position="0 0.8 2" width="1.5" height="1.2" depth="1.5" color="#87CEEB" opacity="0.6"></a-box>
       <!-- Tail boom -->
-      <a-box position="0 0 -1.5" width="0.4" height="0.4" depth="1.2" color="#FFD700"></a-box>
-      <!-- Tail rotor -->
-      <a-cylinder position="0 0.5 -2" radius="0.6" height="0.1" color="#333"></a-cylinder>
-
-      <!-- Main rotor (spinning) -->
-      <a-entity position="0 1.8 0" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 500; easing: linear; loop: true;">
-        <a-cylinder position="0 0 0" radius="2" height="0.05" color="#333"></a-cylinder>
-        <a-box position="-2 0 0" width="4" height="0.08" depth="0.3" color="#444"></a-box>
+      <a-cylinder position="0 0 -2.5" radius="0.25" height="2" color="#FFCC00"></a-cylinder>
+      <!-- Tail rotor (small spinning) -->
+      <a-entity position="0 0.4 -3.5" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 400; easing: linear; loop: true;">
+        <a-cylinder position="0 0 0" radius="0.8" height="0.08" color="#333"></a-cylinder>
       </a-entity>
-
-      <!-- Landing skids -->
-      <a-box position="-0.8 -0.7 0.5" width="0.15" height="1" depth="0.15" color="#000"></a-box>
-      <a-box position="0.8 -0.7 0.5" width="0.15" height="1" depth="0.15" color="#000"></a-box>
-
-      <!-- Rescue basket (animated up/down) -->
-      <a-entity position="0 -1.5 0" animation="property: position; from: 0 -1.5 0; to: 0 -12 0; dur: 4000; easing: easeInOutQuad; loop: true; delay: 1000;">
-        <a-box position="0 0 0" width="0.8" height="0.6" depth="0.8" color="#FFD700"></a-box>
-        <!-- Rescue rope -->
-        <a-cylinder position="0 1 0" radius="0.05" height="2" color="#FFD700"></a-cylinder>
-        <!-- Person being rescued -->
-        <a-entity position="0 -0.4 0">
-          <!-- Head -->
-          <a-sphere position="0 0.3 0" radius="0.15" color="#FDBCB4"></a-sphere>
-          <!-- Body -->
-          <a-cylinder position="0 0 0" radius="0.12" height="0.4" color="#FFD700"></a-cylinder>
-          <!-- Arms -->
-          <a-cylinder position="-0.15 0.05 0" radius="0.05" height="0.3" color="#FDBCB4" rotation="0 0 -30"></a-cylinder>
-          <a-cylinder position="0.15 0.05 0" radius="0.05" height="0.3" color="#FDBCB4" rotation="0 0 30"></a-cylinder>
-        </a-entity>
+      <!-- Landing skids (twin) -->
+      <a-cylinder position="-1.2 -0.8 0" radius="0.15" height="1.2" color="#000"></a-cylinder>
+      <a-cylinder position="1.2 -0.8 0" radius="0.15" height="1.2" color="#000"></a-cylinder>
+      <!-- Main rotor (spinning) -->
+      <a-entity position="0 2.2 0" animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 450; easing: linear; loop: true;">
+        <a-cylinder position="0 0 0" radius="3" height="0.06" color="#333"></a-cylinder>
+        <a-box position="-3 0 0" width="6" height="0.1" depth="0.25" color="#444"></a-box>
+        <a-box position="0 0 -3" width="0.25" height="0.1" depth="6" color="#444"></a-box>
+      </a-entity>
+      <!-- Rescue winch/basket (animated) -->
+      <a-entity position="0 -2 0" animation="property: position; from: 0 -2 0; to: 0 -12 0; dur: 5000; easing: easeInOutQuad; loop: true; delay: 1000;">
+        <a-box position="0 0 0" width="1" height="0.8" depth="1" color="#FF8C00"></a-box>
+        <a-cylinder position="0 1.5 0" radius="0.08" height="2.5" color="#8B4513"></a-cylinder>
       </a-entity>
     </a-entity>
 
